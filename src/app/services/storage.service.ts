@@ -1,4 +1,3 @@
-
 import { CartLine } from '../interfaces/cart-line';
 import { Product } from '../interfaces/product';
 import { Injectable } from '@angular/core';
@@ -27,9 +26,6 @@ export class StorageService {
       var temp = cart.find((o:any) => o._id === _id);
       if (!temp) {
           cart.push({ _id,name,image,price,quantity:1 ,category_id,is_featured,is_recent,total:price
-          
-
-
           });
       } else {
           temp.quantity += 1;
@@ -43,4 +39,5 @@ export class StorageService {
 
    
   }
+  
 }
