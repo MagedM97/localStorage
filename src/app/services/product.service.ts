@@ -41,6 +41,6 @@ export class ProductService {
     localStorage.getItem('heart');
   }
   addHeartNumber(){
-    return localStorage.getItem('heart');
+    return localStorage.getItem('heart')||0;
   }
 }
