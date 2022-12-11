@@ -14,4 +14,7 @@ export class ProductComponent {
   addProductToCart() {
     this.productService.addProduct(this.product);
   }
+  @Input() addHeart(){
+    this.productService.getHeartNumber()
+  }
 }

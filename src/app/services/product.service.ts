@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { environment } from 'src/environment/environment';
 import { Product } from '../interfaces/product';
 
@@ -8,6 +8,7 @@ import { Product } from '../interfaces/product';
 })
 export class ProductService {
   cartProducts: Product[] = [];
+  heart:number=0;
 
   constructor(private httpClient: HttpClient) {}
 
@@ -33,5 +34,13 @@ export class ProductService {
 
   getProductByCategoryId(id:string){
     return this.httpClient.get(`${environment.apiUrl}products/getByCategoryId/${id}`);
+  }
+   getHeartNumber(){
+    this.heart+=1
+    localStorage.setItem('heart',JSON.stringify(this.heart))
+    localStorage.getItem('heart');
+  }
+  addHeartNumber(){
+    return localStorage.getItem('heart');
   }
 }
