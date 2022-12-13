@@ -1,4 +1,4 @@
-import { CartLine } from '../interfaces/cart-line';
+import { Person } from '../interfaces/cart-line';
 import { Product } from '../interfaces/product';
 import { Injectable } from '@angular/core';
 
