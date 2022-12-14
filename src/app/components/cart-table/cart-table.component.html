@@ -11,8 +11,8 @@
   <tbody class="align-middle" id="products">
     <tr *ngFor="let line of item.cartLines; let i = index">
       <td class="align-middle">
-        <img [src]="line.product.image" alt="" style="width: 50px" />
-        {{ line.product.name }}
+        <img [src]="line.image" alt="" style="width: 50px" />
+        {{ line.name }}
       </td>
       <td class="align-middle">{{ line.price | currency }}</td>
       <td class="align-middle">

@@ -16,7 +16,7 @@
 <div class="container-fluid">
   <div class="row px-xl-5">
     <div class="col-lg-8 table-responsive mb-5">
-      <app-cart-table [item]="m" ></app-cart-table>
+      <app-cart-table [item]="item" ></app-cart-table>
     </div>
     <div class="col-lg-4">
       <form class="mb-30" action="">
@@ -32,9 +32,9 @@
         </div>
       </form>
       <app-cart-total
-        [subTotal]="m.getSubTotal()"
-        [shipping]="m.getShipping()"
-        [total]="m.getTotal()"
+        [subTotal]="item.getSubTotal()"
+        [shipping]="item.getShipping()"
+        [total]="item.getTotal()"
       ></app-cart-total>
     </div>
   </div>

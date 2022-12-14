@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { Person } from 'src/app/interfaces/cart-line';
+import { Cart } from 'src/app/interfaces/cart';
+import { CartLine } from 'src/app/interfaces/cart-line';
+
+
 
 @Component({
   selector: 'app-cart',
@@ -7,5 +10,6 @@ import { Person } from 'src/app/interfaces/cart-line';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent {
-   m=new Person;
+  
+   item=new Cart(JSON.parse(localStorage.getItem('cartline')||'{}'));
 }
